@@ -57,18 +57,30 @@ show the number of players yet to submit orders.
 and so that other tools might be used.
 
 ## other apps
-There must be lots of apps that can make API calls and display the results.
+Any app that can send an HTTP request
+and format the output can use the techniques
+documented here.
 
 #### requirements
-* URL
-* ability to parse XML result
-* display result somewhere useful
-* don't spam the server with simultaneous requests
+- Send a POST request to the RSWGame server.
+	- POST is required for sending user name and password.
+- Parse the XML result.
+- display the result somewhere useful.
+- Don't spam the server with simultaneous requests.
 
-#### platforms
-* widgets? apps?
-* MacOS?
-* Android?
-* Windows? 
-* Linux?
-
+#### platforms & apps
+- iOS
+	- [HTTPWidget](https://apps.apple.com/us/app/httpwidget/id6447097633)
+	- [Backend widget?](https://apps.apple.com/us/app/backend-widget-api-dashboard/id6444039978)
+- MacOS
+	- HTTPWidget
+	- other iOS/iPadOS apps via Mac Catalyst
+- Android
+	- [HTTP Request Shortcuts?](https://play.google.com/store/apps/details?hl=en-US&id=ch.rmy.android.http_shortcuts) 
+	- [HTTP Request Widget?](https://play.google.com/store/apps/details?hl=en-US&id=com.idlegandalf.httprequestwidget)
+- Windows
+	- WinWidgets? Rainmeter?
+- Linux
+	- Conky? Eww? Screenlets?
+- browser extensions
+- variations: menu bar, desktop
