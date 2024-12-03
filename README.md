@@ -8,7 +8,7 @@ Skip to the **HTTPWidget operation** section.
 The operation of HTTPWidget described below contains the structure of the
 request and response from the RSWGame server. You can use these parameters
 with any other tool that makes HTTP requests. See the list below. Let me
-know if you find other compatible tools.
+know your experience with those or other tools.
 
 ## introduction
 I like to know how many players have not yet submitted orders. If I've
@@ -54,22 +54,37 @@ Now press the *Send Request* button in the *RESPONSE* section. If everything
 worked, the *Extracted:* line in the *RESPONSE EXTRACT* section should
 show the number of players yet to submit orders.
 
-> include the basic example of the response so the regex makes sense,
-and so that other tools might be used.
+The example response below is abbreviated. The actual response contains
+more elements and more attributes.
+```
+<?xml version="1.0" encoding="utf-8"?>
+<response>
+  <gameHeader changeSeq="302" gameId="filament1a"
+  		involved="True" numWaitingFor="2" state="active" turnNumber="2">
+    <playerHeader handle="omega" msgCount="42" numOrders="12" score="222"
+    	thisIsMe="True" typeKey="warlord"/>
+  </gameHeader>
+  <gameHeader changeSeq="111" gameId="graviton8x"
+  		involved="True" numWaitingFor="10" state="active" turnNumber="2">
+    <playerHeader handle="alpha" msgCount="1" numOrders="5" score="-100"
+    	thisIsMe="True" typeKey="collector"/>
+  </gameHeader>
+</response>
+```
 
 ## other apps
 Any app that can send an HTTP request
 and format the output can use the techniques
 documented here.
 
-#### requirements
+### requirements
 - Send a POST request to the RSWGame server.
 	- POST is required for sending user name and password.
 - Parse the XML result.
 - display the result somewhere useful.
 - Don't spam the server with simultaneous requests.
 
-#### platforms & apps
+### platforms & apps
 - iOS
 	- [HTTPWidget](https://apps.apple.com/us/app/httpwidget/id6447097633)
 	- [Backend widget?](https://apps.apple.com/us/app/backend-widget-api-dashboard/id6444039978)
@@ -80,8 +95,11 @@ documented here.
 	- [HTTP Request Shortcuts?](https://play.google.com/store/apps/details?hl=en-US&id=ch.rmy.android.http_shortcuts)
 	- [HTTP Request Widget?](https://play.google.com/store/apps/details?hl=en-US&id=com.idlegandalf.httprequestwidget)
 - Windows
-	- WinWidgets? Rainmeter?
+	- WinWidgets?
+	- Rainmeter?
 - Linux
-	- Conky? Eww? Screenlets?
+	- Conky?
+	- eww?
+	- Screenlets?
 - browser extensions
 - variations: menu bar, desktop
