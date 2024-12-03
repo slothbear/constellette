@@ -29,10 +29,10 @@ the result in a widget on your home screen.
 1. Get the app called HTTPWidget: https://apps.apple.com/us/app/httpwidget/id6447097633
 2. Create a new widget and enter the following fields:
     * *in the HTTP BASIC section*
-    * URL: https://rswgame.com/xml
-    * HTTP Method: POST
-    * Request Body: Raw
-    * Raw Body:
+    * **URL**: https://rswgame.com/xml
+    * **HTTP Method**: POST
+    * **Request Body**: Raw
+    * **Raw Body**:
     ```xml
     <?xml version='1.0'?>
     <request command='list'>
@@ -43,8 +43,8 @@ the result in a widget on your home screen.
     </request>
     ```
     * *in the RESPONSE EXTRACT section*
-    * Extract by: Regex
-    * Regex String:
+    * **Extract by**: Regex
+    * **Regex String**:
     ```
     gameID="YourGameID".*numWaitingFor="(\d+)"
     ```
