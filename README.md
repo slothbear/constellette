@@ -1,13 +1,14 @@
 # constellette
 
 ## express path
-Skip to the "HTTPWidget operation" section.
+Skip to the **HTTPWidget operation** section.
 
 ## prelude
 
 The operation of HTTPWidget described below contains the structure of the
 request and response from the RSWGame server. You can use these parameters
-with any other tool that makes HTTP requests. See the list below.
+with any other tool that makes HTTP requests. See the list below. Let me
+know if you find other compatible tools.
 
 ## introduction
 I like to know how many players have not yet submitted orders. If I've
