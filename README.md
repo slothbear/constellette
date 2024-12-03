@@ -72,6 +72,15 @@ more elements and more attributes.
 </response>
 ```
 
+#### sample HTTPWidgets
+HTTPWidget supports several styles of widget supporting a single or
+multiple results, along with a "trend" showing result history.
+
+![single result widget](./single.jpeg)
+![multiple result widget](./multiple.jpeg)
+
+![trend result widget](./trend.jpeg)
+
 ## other apps
 Any app that can send an HTTP request
 and format the output can use the techniques
