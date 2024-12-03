@@ -10,13 +10,13 @@ request and response from the RSWGame server. You can use these parameters
 with any other tool that makes HTTP requests. See the list below.
 
 ## introduction
-I like to know how many players have not yet submitted orders. If I've 
-already sent in my orders, this number gives me a rough idea of when the 
-next turn might run. If I haven't sent in my orders and the number 
+I like to know how many players have not yet submitted orders. If I've
+already sent in my orders, this number gives me a rough idea of when the
+next turn might run. If I haven't sent in my orders and the number
 reaches 1, I know the turn is waiting for me. There's no legal requirement
 to finish the turn before the due date, but I like this motivation.
 
-I thought about making an iPhone widget to show the game status. I might 
+I thought about making an iPhone widget to show the game status. I might
 still make an app, but there are already apps that can display the information
 in a widget.
 
@@ -24,7 +24,7 @@ in a widget.
 
 HTTPWidget is a free app that works on iOS, iPadOS, and MacOS. The app can make
 a request to the RSWGame server, parse the response, and display
-the result in a widget on your home screen. 
+the result in a widget on your home screen.
 
 1. Get the app called HTTPWidget: https://apps.apple.com/us/app/httpwidget/id6447097633
 2. Create a new widget and enter the following fields:
@@ -50,7 +50,7 @@ the result in a widget on your home screen.
     ```
 
 Now press the *Send Request* button in the *RESPONSE* section. If everything
-worked, the *Extracted:* line in the *RESPONSE EXTRACT* section should 
+worked, the *Extracted:* line in the *RESPONSE EXTRACT* section should
 show the number of players yet to submit orders.
 
 > include the basic example of the response so the regex makes sense,
@@ -76,7 +76,7 @@ documented here.
 	- HTTPWidget
 	- other iOS/iPadOS apps via Mac Catalyst
 - Android
-	- [HTTP Request Shortcuts?](https://play.google.com/store/apps/details?hl=en-US&id=ch.rmy.android.http_shortcuts) 
+	- [HTTP Request Shortcuts?](https://play.google.com/store/apps/details?hl=en-US&id=ch.rmy.android.http_shortcuts)
 	- [HTTP Request Widget?](https://play.google.com/store/apps/details?hl=en-US&id=com.idlegandalf.httprequestwidget)
 - Windows
 	- WinWidgets? Rainmeter?
