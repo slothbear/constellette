@@ -15,11 +15,7 @@ I like to know how many players have not yet submitted orders. If I've
 already sent in my orders, this number gives me a rough idea of when the
 next turn might run. If I haven't sent in my orders and the number
 reaches 1, I know the turn is waiting for me. There's no legal requirement
-to finish the turn before the due date, but I like this motivation.
-
-I thought about making an iPhone widget to show the game status. I might
-still make an app, but there are already apps that can display the information
-in a widget.
+to finish the turn before the due date, but I like the motivation.
 
 ## HTTPWidget operation
 
@@ -50,7 +46,7 @@ the result in a widget on your home screen.
     gameID="YourGameID".*numWaitingFor="(\d+)"
     ```
 
-Now press the *Send Request* button in the *RESPONSE* section. If everything
+Now tap the *Send Request* button in the *RESPONSE* section. If everything
 worked, the *Extracted:* line in the *RESPONSE EXTRACT* section should
 show the number of players yet to submit orders.
 
@@ -81,19 +77,28 @@ multiple results, along with a "trend" showing result history.
 
 ![trend result widget](./trend.jpeg)
 
+#### HTTPWidget notifications
+The app supports sending a notification when the result value changes.
+If there are ten players in the game, you could get notified when the
+result changes to "10", indicating a new turn is published.
+
+![sample notification](./notification.jpeg)
+
 ## other apps
-Any app that can send an HTTP request
+Any application that can send an HTTP request
 and format the output can use the techniques
 documented here.
 
 ### requirements
 - Send a POST request to the RSWGame server.
-	- POST is required for sending user name and password.
+	- POST is required for sending the user name and password.
 - Parse the XML result.
-- display the result somewhere useful.
+- Display the result somewhere useful.
 - Don't spam the server with simultaneous requests.
 
-### platforms & apps
+### platforms & applications
+The only application I've used is HTTPWidget. I found some others to explore.
+Let me know if you've had success with any of them, or find other tools.
 - iOS
 	- [HTTPWidget](https://apps.apple.com/us/app/httpwidget/id6447097633)
 	- [Backend widget?](https://apps.apple.com/us/app/backend-widget-api-dashboard/id6444039978)
